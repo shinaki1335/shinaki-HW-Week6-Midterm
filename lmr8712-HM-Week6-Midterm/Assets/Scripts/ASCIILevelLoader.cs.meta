@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: b4bf9a2264bcc304aac5f56ed31f92ed
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {fileID: 8482691178401406927, guid: 4647060fcd48c2840ab4e15d1f3b0248,
+      type: 3}
+  - wall: {instanceID: 0}
+  - floor: {instanceID: 0}
+  - portal: {instanceID: 0}
+  - level: {instanceID: 0}
+  - redDoor: {instanceID: 0}
+  - blueDoor: {instanceID: 0}
+  - greenDoor: {instanceID: 0}
+  - yellowDoor: {instanceID: 0}
+  - redKey: {instanceID: 0}
+  - blueKey: {instanceID: 0}
+  - greenKey: {instanceID: 0}
+  - yelllowKey: {instanceID: 0}
+  - currentPlayer: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

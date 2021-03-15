@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2118948378290206342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3835845456676717169}
+  - component: {fileID: 9157164839818007813}
+  - component: {fileID: 6599929750511007914}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3835845456676717169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118948378290206342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.9649535, y: -0.46904725, z: -0.91655135}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9157164839818007813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118948378290206342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91e60f8856f5e1a4eb56e239921a35e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueKey: 0
+  greenKey: 0
+  redKey: 0
+  yellowKey: 0
+--- !u!114 &6599929750511007914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118948378290206342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4bf9a2264bcc304aac5f56ed31f92ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8482691178401406927, guid: 4647060fcd48c2840ab4e15d1f3b0248, type: 3}
+  wall: {fileID: 4842694142153327612, guid: 51b7f31ef4de10f49b6045ba01fe922b, type: 3}
+  portal: {fileID: 2636390419269649004, guid: 0df584c1883bcea4b88535f04c3ec73a, type: 3}
+  level: {fileID: 0}
+  redDoor: {fileID: 9133733934207159235, guid: 98a37a34534110648a72c9f5e56c876e, type: 3}
+  blueDoor: {fileID: 4957975511088815196, guid: f5ac7eb9a203c2345936aba8d19ddb12,
+    type: 3}
+  greenDoor: {fileID: 7519390721523468326, guid: b4bf942e830a2d44c867b224f11c0b49,
+    type: 3}
+  yellowDoor: {fileID: 3452183437627400889, guid: 2f1f0499c437c8a44a27b6e7c8219063,
+    type: 3}
+  redKey: {fileID: 4676933672582744176, guid: fa388169bd9a17146bd67a6971b4e436, type: 3}
+  blueKey: {fileID: 5648732301814837069, guid: a3f855d334f710540b2093f2d141886d, type: 3}
+  greenKey: {fileID: 7172896566641686851, guid: fde9d9518602bfc4bb293919193b68f7,
+    type: 3}
+  yelllowKey: {fileID: 4328024537740896826, guid: 43ad81670e7e45742a7db8ab29885a00,
+    type: 3}
+  currentPlayer: {fileID: 0}
+  offsetX: -5
+  offsetY: 12
+  fileName: LevelNum.txt
+  currentLevel: 0
