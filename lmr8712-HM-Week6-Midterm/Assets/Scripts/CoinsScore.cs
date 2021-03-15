@@ -5,23 +5,11 @@ using UnityEngine;
 
 public class CoinsScore : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    private void OnTriggerEnter2D(Collider2D other) 
-    {
-        if (other.gameObject.name.Contains("Player"))
-        {
-            Destroy(gameObject);
+    // When the collider is triggered
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.name.Contains("Player")) {         //if collider was activated by the player
+            GameManager.instance.Score++;                       //add one to score
+            Destroy(gameObject);                                //destroy this object
         }
     }
 }

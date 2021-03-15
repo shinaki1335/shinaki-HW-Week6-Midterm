@@ -45,14 +45,14 @@ public class PlayerController : MonoBehaviour
         }
         
         if (Input.GetKey(KeyCode.D)) {                  //when pressing D
-            rb2D.AddForce(Vector2.right * forceAmount);  //add force to rb to move right
+            rb2D.AddForce(Vector2.right * forceAmount); //add force to rb to move right
         }
 
-        if (Input.GetKey(KeyCode.R))
-        {
+        if (Input.GetKey(KeyCode.R)) {                  //when pressing R
+            // Reload the level, reset the player and make the player stop moving
             GameManager.instance.GetComponent<ASCIILevelLoader>().LoadLevel();
             GameManager.instance.GetComponent<ASCIILevelLoader>().ResetPlayer();
-            rb2D.velocity = Vector2.zero;
+            rb2D.velocity = Vector2.zero;                                           
             rb2D.angularVelocity = 0f;
         }
     }

@@ -6,17 +6,17 @@ using UnityEngine.SceneManagement;
 
 public class ChangeLevel : MonoBehaviour
 {
+    private int lastLevel = 8;
+    
     // When the collider is triggered
     private void OnTriggerEnter2D(Collider2D other) {
-        if (GameManager.instance.level > 8)
-        {
-            SceneManager.LoadScene(sceneBuildIndex: 1);
+        if (GameManager.instance.level > lastLevel) {                             //if last level completed
+            SceneManager.LoadScene(sceneBuildIndex: 1);                           //load GameOver scene
+            GameManager.instance.inGame = false;                                  //change inGame to false
         }
-        else
-        {
+        else {
             GameManager.instance.GetComponent<ASCIILevelLoader>().CurrentLevel++; //change the value of currentLevel
-            GameManager.instance.level++;
+            GameManager.instance.level++;                                         //add one to level variable
         }
-
     }
 }

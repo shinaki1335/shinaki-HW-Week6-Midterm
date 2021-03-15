@@ -44,10 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91e60f8856f5e1a4eb56e239921a35e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  inGame: 1
   blueKey: 0
   greenKey: 0
   redKey: 0
   yellowKey: 0
+  levelText: {fileID: 0}
+  timeText: {fileID: 0}
+  scoreText: {fileID: 0}
 --- !u!114 &6599929750511007914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,6 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4bf9a2264bcc304aac5f56ed31f92ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coin: {fileID: 7236656345241806359, guid: 696a292ebe2684a469b129ea929311b7, type: 3}
   player: {fileID: 8482691178401406927, guid: 4647060fcd48c2840ab4e15d1f3b0248, type: 3}
   wall: {fileID: 4842694142153327612, guid: 51b7f31ef4de10f49b6045ba01fe922b, type: 3}
   portal: {fileID: 2636390419269649004, guid: 0df584c1883bcea4b88535f04c3ec73a, type: 3}
@@ -75,7 +81,7 @@ MonoBehaviour:
   blueKey: {fileID: 5648732301814837069, guid: a3f855d334f710540b2093f2d141886d, type: 3}
   greenKey: {fileID: 7172896566641686851, guid: fde9d9518602bfc4bb293919193b68f7,
     type: 3}
-  yelllowKey: {fileID: 4328024537740896826, guid: 43ad81670e7e45742a7db8ab29885a00,
+  yellowKey: {fileID: 4328024537740896826, guid: 43ad81670e7e45742a7db8ab29885a00,
     type: 3}
   currentPlayer: {fileID: 0}
   offsetX: -5

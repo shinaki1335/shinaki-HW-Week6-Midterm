@@ -18,7 +18,7 @@ public class ASCIILevelLoader : MonoBehaviour
     public GameObject redKey;
     public GameObject blueKey;
     public GameObject greenKey;
-    public GameObject yelllowKey;
+    public GameObject yellowKey;
     public GameObject currentPlayer;
     
     // Create variable for the current position of the player
@@ -37,11 +37,11 @@ public class ASCIILevelLoader : MonoBehaviour
     // Property for the currentLevel
     // Changes the level that is going to be load
     public int CurrentLevel {
-        get { return currentLevel;}     //get the currentLevel variable
+        get { return currentLevel;}                                    //get the currentLevel variable
         set {
-            currentLevel = value;       //set it to value
-            LoadLevel();                //load the level
-            startPosition = currentPlayer.transform.position;
+            currentLevel = value;                                      //set it to value
+            LoadLevel();                                               //load the level
+            startPosition = currentPlayer.transform.position;   // store the start the start position og the player
         }  
     }
 
@@ -54,6 +54,7 @@ public class ASCIILevelLoader : MonoBehaviour
     public void LoadLevel() {
         Destroy(level);                              //destroy the current level
         level = new GameObject("Level");        //create a new level object
+        // Make all the keys false at the start of each level
         GameManager.instance.blueKey = false;
         GameManager.instance.greenKey = false;
         GameManager.instance.redKey = false;
@@ -68,13 +69,11 @@ public class ASCIILevelLoader : MonoBehaviour
         // Pull the contents of the file into a string array, each line is an item of the array
         string[] fileLines = File.ReadAllLines(current_file_path);
         
-        
         for(int y = 0; y < fileLines.Length; y++) {                     //loop through each line
             string lineText = fileLines[y];                             //get the current line
             
             char[] characters = lineText.ToCharArray();                 //split the line into a characters arrays
-            
-            
+
             for (int x = 0; x < characters.Length; x++) {               //loop through each character
                 char c = characters[x];                                 //get current character
 
@@ -86,6 +85,10 @@ public class ASCIILevelLoader : MonoBehaviour
                     
                     case 'B':                                           //if the character is 'B'
                         newObject = Instantiate<GameObject>(blueKey);   //make a blueKey
+                        break;
+                    
+                    case 'c':                                           //if the character is 'c'
+                        newObject = Instantiate<GameObject>(coin);      //make a coin
                         break;
                     
                     case 'g':                                           //if the character is 'g'
@@ -100,7 +103,7 @@ public class ASCIILevelLoader : MonoBehaviour
                         newObject = Instantiate<GameObject>(player);    //make the player
                         if (currentPlayer == null){                     //if not object on the currentPlayer
                             currentPlayer = newObject;                  //store this object
-                            startPosition = new Vector2(
+                            startPosition = new Vector2(                //create variable to store the start position
                                 x + offsetX, -y + offsetY);
                         }
                         break;
@@ -122,15 +125,11 @@ public class ASCIILevelLoader : MonoBehaviour
                         break;
                     
                     case 'Y':                                             //if the character is 'Y'
-                        newObject = Instantiate<GameObject>(yelllowKey);  //make a yellowKey
+                        newObject = Instantiate<GameObject>(yellowKey);  //make a yellowKey
                         break;
                     
                     case '&':                                              //if the character is '&'
                         newObject = Instantiate<GameObject>(portal);       //create a portal
-                        break;
-                    
-                    case '-':
-                        newObject = Instantiate<GameObject>(coin);
                         break;
                     
                     default:                                               //if any other character
@@ -150,8 +149,8 @@ public class ASCIILevelLoader : MonoBehaviour
         }
     }
 
-    public void ResetPlayer()
-    {
-        currentPlayer.transform.position = startPosition;
+    // Function to reset the player
+    public void ResetPlayer() {
+        currentPlayer.transform.position = startPosition;               // move player to start position
     }
 }

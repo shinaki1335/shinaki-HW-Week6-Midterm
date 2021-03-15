@@ -7,7 +7,7 @@ public class Keys : MonoBehaviour
 {
     // When detecting a collision
     private void OnCollisionEnter2D(Collision2D other) {
-        if (other.gameObject.name.Contains("Player")) {       //check if the other object is the player
+        if (other.gameObject.name.Contains("Player")) {       //if the collision was activated by the player
             Destroy(gameObject);                              //destroy the object
             
             if (gameObject.name.Contains("Blue")) {           //if the object was the blueKey
@@ -19,8 +19,8 @@ public class Keys : MonoBehaviour
             else if (gameObject.name.Contains("Red")) {       //if the object was the redKey
                 GameManager.instance.redKey = true;           //set redKey to true
             }
-            else if (gameObject.name.Contains("Yellow")) {     //if the object was the yellowKey
-                GameManager.instance.yellowKey = true;         //set yellowKey to true
+            else if (gameObject.name.Contains("Yellow")) {    //if the object was the yellowKey
+                GameManager.instance.yellowKey = true;        //set yellowKey to true
             }
         }
     }
